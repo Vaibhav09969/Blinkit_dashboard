@@ -1,42 +1,49 @@
-# 🟡 Blinkit Sales Dashboard – SQL, Excel & Power BI
+<h1 align="center">🟡 Blinkit Sales Dashboard</h1>
+<h3 align="center">SQL | Excel | Power BI</h3>
 
-![Main Dashboard Overview](blinkit_main_dashboard.png)
+<p align="center">
+  <img src="blinkit_main_dashboard.png" alt="Blinkit Dashboard Overview" width="85%" style="border-radius:15px;box-shadow:0 0 10px rgba(0,0,0,0.2);"/>
+</p>
 
-### 📊 Project Overview  
-The **Blinkit Sales Dashboard** is a complete end-to-end data analytics project developed using **SQL**, **Excel**, and **Power BI**.  
-It focuses on cleaning and analyzing Blinkit’s sales data to identify performance trends, top outlets, and customer preferences.  
-The project delivers business insights through **automated data processing** and **interactive dashboards**.
+---
+
+## 🧠 Project Overview  
+The **Blinkit Sales Dashboard** is a complete **data analytics and visualization project** integrating **SQL, Excel, and Power BI**.  
+It provides an in-depth analysis of sales trends, outlet performance, and customer preferences — helping the company make informed business decisions.
+
+🔹 **Goal:** Build an automated pipeline from SQL to Excel to Power BI  
+🔹 **Focus Areas:** Data Cleaning, KPI Creation, and Interactive Visualization  
+🔹 **Outcome:** A dynamic dashboard enabling outlet-level performance monitoring  
 
 ---
 
 ## 🧰 Tools & Technologies Used  
-- **SQL** – Data cleaning, transformation, and KPI creation  
-- **Excel** – Data validation, pivot analysis, and initial dashboard  
-- **Power BI** – Data modeling, visualization, and business insights  
-- **Power Query** – Automated data connection and refresh  
+| Tool | Purpose |
+|------|----------|
+| 🧮 **SQL** | Data extraction, cleaning & KPI generation |
+| 📗 **Excel** | Data validation, pivot analysis & dashboarding |
+| 📊 **Power BI** | Interactive dashboards & advanced data visualization |
+| ⚙️ **Power Query** | Data transformation & automated refresh |
 
 ---
 
 ## ⚙️ Project Workflow  
 
-### 🧮 1. SQL – Data Cleaning & KPI Generation  
-![SQL Data Cleaning](blinkit_sql_cleaning.png)
+### 🧩 Step 1: SQL – Data Cleaning & KPI Generation  
+<p align="center">
+  <img src="blinkit_sql_cleaning.png" alt="SQL Data Cleaning" width="85%" style="border-radius:15px;box-shadow:0 0 10px rgba(0,0,0,0.2);"/>
+</p>
 
-- Cleaned and standardized raw Blinkit sales data.  
-- Removed duplicate and inconsistent records for accurate reporting.  
-- Created KPIs using SQL aggregate functions such as:  
-  - `SUM(Total_Sales)` → Total Sales  
-  - `AVG(Rating)` → Average Rating  
-  - `COUNT(Item_Identifier)` → Total Items Sold  
-- Prepared analysis-ready data for Excel and Power BI integration.  
+✅ Removed duplicates, nulls, and inconsistent categories  
+✅ Created KPIs: `Total Sales`, `Average Rating`, `Outlet Performance`  
+✅ Standardized item categories and outlet metadata  
 
-**Example SQL Query:**
+**Sample Query**
 ```sql
-SELECT 
-  Outlet_Type, 
-  SUM(Total_Sales) AS Total_Sales, 
-  AVG(Total_Sales) AS Avg_Sales, 
-  COUNT(*) AS No_Of_Items, 
-  AVG(Rating) AS Avg_Rating
+SELECT Outlet_Type, 
+       SUM(Total_Sales) AS Total_Sales, 
+       AVG(Total_Sales) AS Avg_Sales, 
+       COUNT(*) AS Items_Sold, 
+       AVG(Rating) AS Avg_Rating
 FROM blinkit_sales
 GROUP BY Outlet_Type;
